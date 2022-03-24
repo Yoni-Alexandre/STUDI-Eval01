@@ -1,0 +1,348 @@
+/* ---- ------------------------------- ---- */
+/* ---- DEBUT RESET CSS & CONFIGURATION ---- */
+/* ---- ------------------------------- ---- */
+* {
+  /* Inclus le padding + la bordure */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;  
+}
+
+header, main {
+  margin: 0 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+a:hover {  
+  text-decoration: none;
+  color: red;
+}
+/* ---- ----------------------------- ---- */
+/* ---- FIN RESET CSS & CONFIGURATION ---- */
+/* ---- ----------------------------- ---- */
+
+
+/* ---- ------------ ---- */
+/* ---- MOBILE FIRST ---- */
+/* ---- ------------ ---- */
+
+/* Header */
+.images {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+
+.logo-getback {
+  width: 10%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo-getback img {
+  width: 70px;
+  padding-bottom: 20px;
+}
+
+.image-accueil img {
+  width: 100%;
+  border: 5px solid #111;
+}
+
+.btn-hamburger {
+  position: absolute;
+  position: fixed;
+  right: 30px;
+  top: 40px;
+  z-index: 20;
+}
+
+/* Navigation */
+.navigation {
+  position: fixed;
+  right: 0;
+  /* padding: 0 50px; */
+  background: #333;
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transform: translate(100%);
+}
+
+.btn-hamburger .barreHamburger {
+  width: 30px;
+  height: 3px;
+  background: #111;
+  margin-top: 3px;
+}
+
+/* ---- DEBUT -- Modification du menu ---- */
+.navigation.active {
+  transform: translate(0%);
+}
+/* .btn-hamburger .barreHamburger.colorWhite {
+  background: white;
+} */
+/* ---- FIN -- Modification du menu ---- */
+
+.navigation ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navigation ul li {
+  margin: 20px 0;
+}
+
+.navigation ul li a{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.09em;
+  font-weight: 600;
+}
+
+.image-accueil img {
+  margin-bottom: 25px;
+}
+
+.titre {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  color: #666;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* Main */
+main {
+  padding: 8px;
+}
+
+section {
+  padding-bottom: 25px;
+}
+
+section h1, h2{
+  text-transform: uppercase;
+}
+
+.section-image img {
+  width: 100%;
+}
+
+.section-image-galerie img {
+  width: 100%;
+  height: 100%;
+}
+
+.section-video a:hover {
+  color: red;
+}
+
+/* .section-video {
+  border: 1px solid #111;
+  background: #111;
+} */
+.section-video iframe {
+  width: 100%;
+  height: 600px;
+}
+
+/* Footer */
+footer {
+  font-size: 10px;
+  background-color: #333;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer nav a {
+  color: #fff;
+  font-size: 12px;
+  line-height: 40px;
+  letter-spacing: 0.20em;
+  font-weight: 600;
+}
+
+/* ---- ------------------ ---- */
+/* ---- DEBUT -- PAGES WEB ---- */
+/* ---- ------------------ ---- */
+
+/* Page - Évènements */
+
+/* Page - Galerie */
+.section-image-galerie {
+  display: flex;
+}
+
+/* Page - Contact */
+.section-contact {
+  padding-bottom: 100px;
+}
+
+.section-contact h2 {
+  text-align: center;
+  color: #333;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  padding: 70px 0 0 0;
+}
+
+.container-form {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.form-groupe {
+  position: relative;
+  margin-top: 45px;
+}
+
+.form-groupe label {
+  color: #aaa;
+  font-size: 20px;
+}
+
+.form-groupe input {
+display: block;
+width: 100%;
+padding: 10px 0px;
+border: none;
+outline: none;
+background: none;
+border-bottom: 3px solid #aaa;
+color: #666;
+font-size: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border: 3px solid #aaa;
+  border-radius: 3px;
+  padding: 5px;
+  resize: none;
+  outline: none;
+  font-size: 20px;
+  background: #f1f1f1;
+}
+
+/* ---- ------------------ ---- */
+/* ---- FIN -- PAGES WEB ---- */
+/* ---- ------------------ ---- */
+
+/* -------------------------------------- */
+/* ---- RESPONSIVE -- TABLETTE -- PC ---- */
+/* -------------------------------------- */
+@media screen and (min-width: 600px) {
+  /* Navigation */
+  .navigation {
+  width: 45%;
+  }
+
+  /* Main */
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main section {
+    flex: 1;
+    min-width: 45%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+}
+
+@media screen and (min-width: 800px) {
+/* Navigation */
+ .navigation {
+  width: 55%;
+}
+
+.navigation ul li a {
+  font-size: 30px;
+}
+
+.titre {
+  font-size: 25px;
+}
+
+/* Main */
+  main {
+    width: 780px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Header */
+  .logo-getback img {
+    width: 170px;
+    padding-bottom: 20px;
+  }
+  .image-accueil  {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Navigation */
+  .navigation {
+    width: 25%;
+  }
+
+  .btn-hamburger {
+    right: 100px;
+    top: 80px;
+  }
+
+  .btn-hamburger .barreHamburger {
+    width: 60px;
+    height: 5px;
+  }
+
+  .image-accueil img {
+    width: 70%;
+  }
+
+  .titre {
+    font-size: 35px;
+  }
+
+  /* Main */
+  main {
+    width: 1180px;
+  }
+
+  main section {
+    min-width: 30%;
+  }
+
+  /* Footer */
+  footer nav a {
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 0.20em;
+    font-weight: 600;
+  }
+} 
